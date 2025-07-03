@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("*<br>")
+
+        // 外層=>控制列數
+        for (var i = 1; i <= 5; i++) {
+            // 內層=>星星個數
+            // 因為星星個數=外層目前的列數
+            // 所以星星個數的執行次數，會跟目前列數一樣
+            for (j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br>");
+        }
+
+        for (var i = 1; i<=9; i++){
+            for(var j = 1; j<=9; j++){
+                // 1*1=01
+                document.write(`${i}*${j}=`);
+                if(i*j<10){
+                    document.write("0");
+                }
+                // 因為網頁不允許連續半形空白
+                // 所以連續多個空白會視為一個
+                // 若要多個空白的話，可以使全型空白(shitf+空白)
+                // &nbsp;=>HTML空白符號(建議)
+                document.write(i*j+"&nbsp;&nbsp;&nbsp;");
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+
+</html>
