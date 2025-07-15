@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 第1題
+        function printMany() {
+            for (let i = 0; i <= 100; i++) {
+                console.log(i);
+            }
+        }
+        // // printMany();
+
+        // // 第2題
+        function printEvery3() {
+            for (let i = 1; i <= 88; i = i + 3) {
+                console.log(i);
+            }
+        }
+        // printEvery3();
+
+        // 第3題
+        function stars(N) {
+            let result = '';
+            for (let i = 0; i < N; i++) {
+                result += '*';
+            }
+            document.write(result + '<br>');
+        }
+        // stars(3);
+        // stars(10);
+
+        // 第4題
+        function isUpperCase(str) {
+            if (str.length === 0) {
+                return false;
+            }
+            if (str[0] === str[0].toUpperCase()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // console.log(isUpperCase("ABCD")); 
+        // console.log(isUpperCase(""));
+        // console.log(isUpperCase("aBCD"));
+
+        // 第5題
+        function isAllUpperCase(str) {
+            if (str.length === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        // 第6題
+        // 第7題
+        // 第8題
+        // 第9題
+        // 第10題
+   	
+    </script>
+
+</body>
+
+</html>
