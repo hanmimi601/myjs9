@@ -31,6 +31,7 @@
             for (let i = 0; i < N; i++) {
                 result += '*';
             }
+            // console.log(result);
             document.write(result + '<br>');
         }
         // stars(3);
@@ -38,14 +39,19 @@
 
         // 第4題
         function isUpperCase(str) {
-            if (str.length === 0) {
+            // 檢查是否有資料，先去除多餘的空白
+            // trim()去除空白
+            if (str.trim().length == 0) {
                 return false;
             }
-            if (str[0] === str[0].toUpperCase()) {
-                return true;
-            } else {
-                return false;
-            }
+            // if (str[0] === str[0].toUpperCase()) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+
+            // 簡化寫法
+            return str[0] === str[0].toUpperCase();
         }
 
         // console.log(isUpperCase("ABCD")); 
@@ -54,20 +60,93 @@
 
         // 第5題
         function isAllUpperCase(str) {
-            if (str.length === 0) {
-                return true;
-            } else {
+            // 檢查是否有資料，先去除多餘的空白
+            if (str.trim().length == 0) {
                 return false;
             }
+            // 整個字串轉大寫後比對
+            // if (str !== str.toUpperCase()) {
+            //     return false;
+            // }
+            // return true;
+
+            // 
+            return str === str.toUpperCase()
         }
+
+        // console.log(isAllUpperCase("ABCD")); 			// returns true
+        // console.log(isAllUpperCase("")); 				// returns false
+        // console.log(isAllUpperCase("ABCDEFGHIJKLm")); 	// returns false
+
+
 
 
         // 第6題
+        function position(str) {
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === str[i].toUpperCase()) {
+                    return str[i] + " " + i;
+                }
+            }
+            return -1;
+        }
+
+        // console.log(position("abcd")); 	// prints -1
+        // console.log(position("AbcD"));		// prints A 0
+        // console.log(position("abCD")); 	// prints C 2
+
         // 第7題
+        function findSmallCount(arr, n) {
+            let counter = 0;
+            for (let i = 0; i < arr.length; i++) {
+                // 陣列中的值若小於n，次數+1
+                if (arr[i] < n) {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+
+        // console.log(findSmallCount([1, 2, 3], 2)); 		// returns 1
+        // console.log(findSmallCount([1, 2, 3, 4, 5], 0)); 	// returns 0
+
         // 第8題
+        function findSmallerTotal(arr, n) {
+            let tot = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < n) {
+                    tot += arr[i]
+                }
+            }
+            return tot;
+        }
+
+        // console.log(findSmallerTotal([1, 2, 3], 3)); 			// returns 3
+        // console.log(findSmallerTotal([1, 2, 3], 1)); 			// returns 0
+        // console.log(findSmallerTotal([3, 2, 5, 8, 7], 999)); 	// returns 25
+        // console.log(findSmallerTotal([3, 2, 5, 8, 7], 0)); 		// returns 0
+
         // 第9題
+        function findAllSmall(arr, n) {
+            let newArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < n) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        // console.log(findAllSmall([1, 2, 3], 10)); 		// returns [1, 2, 3]
+        // console.log(findAllSmall([1, 2, 3], 2)); 		// returns [1]
+        // console.log(findAllSmall([1, 3, 5, 4, 2], 4)); 	// returns [1, 3, 2]
+
+
         // 第10題
-   	
+        console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); 	// returns 55
+        console.log(sum([])); 							// return 0
+        console.log(sum([-10, -20, -30])); 				// return -60
+
+
     </script>
 
 </body>
