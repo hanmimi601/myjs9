@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(myName,myAge,myH,myW){
+            this.name = myName;
+            this.age =myAge;
+            this.heigh =myH/100;
+            this.weigh
+
+            this.showBMI=function(){
+                let bmi=this.weigh/Math.pow(this.heigh,2);
+                bmi=bmi.toFixed(2);
+                console.log(bmi);
+                return bmi;
+            }
+        }
+
+        let userl=new User('小叮噹',20,157,50);
+        console.log(userl);
+        console.log(user1.showBMI());
+        let user2 = new User('小丸子', 18, 130, 45);
+        console.log(user2);
+        console.log(user2.showBMI());
+
+
+    </script>
+</body>
+</html>

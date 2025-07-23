@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #changeColor:hover {
+            color: red;
+        }
+    </style>
+    <p id="counter">3</p>
+    <button id="btn">計時開始</button>
+    <button id="btn2" style="display: none;">重來</button>
+    <p id="changeColor">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima tenetur laudantium inventore
+        facere eius. Sunt nihil sapiente soluta consequuntur earum! Atque ab distinctio neque labore quis temporibus
+        non! Ea, distinctio.</p>
+
+    <script>
+        let content = document.getElementById("counter");
+        let initalCounter = parseInt(counter.innerText);
+        let btn = document.getElementById("btn");
+        let btn2 = document.getElementById("btn2");
+
+        btn.addEventListener('click', function () {
+            showTime();
+        })
+
+        function showTime(){
+            let interval;
+            let curCounter=initalCounter;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
